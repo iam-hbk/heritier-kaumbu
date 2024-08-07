@@ -121,7 +121,7 @@ export function Portfolio() {
                 width="550"
                 height="550"
                 alt="Hero"
-                className="mx-auto  rounded-xl object-cover sm:w-full max-w-[500px] lg:order-last "
+                className="mx-auto  rounded-xl object-cover sm:w-full sm:max-w-[500px] lg:order-last"
               />
             </div>
           </div>
