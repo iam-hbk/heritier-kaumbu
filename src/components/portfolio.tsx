@@ -81,7 +81,7 @@ export function Portfolio() {
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link
                     target="_blank"
-                    href="https://vbeidqt5tvyy2ydf.public.blob.vercel-storage.com/CVs/Heritier_Kaumbu-7w8GCjCLcl7Jyx6Q4okuC8S1oIuKjq.pdf"
+                    href="https://vbeidqt5tvyy2ydf.public.blob.vercel-storage.com/CVs/Heritier%20Kaumbu%20CV-GQADoYbw2SafzlDvocteedsbRC8OsZ.pdf"
                     className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                     prefetch={false}
                   >
