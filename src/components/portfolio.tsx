@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo3D from "./logo3D";
+import { Badge } from "./ui/badge";
 
 export function Portfolio() {
   return (
@@ -180,11 +181,12 @@ export function Portfolio() {
                   Featured Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Projects I've Worked On
+                  Projects we have completed
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Here are some of the projects I've worked on that showcase my
-                  skills and experience as a software developer.
+                  At <span className="font-bold">TecHBK</span>, we are dedicated
+                  to providing the best possible solutions for our clients. Here
+                  are some of the projects we have completed
                 </p>
               </div>
             </div>
@@ -192,7 +194,10 @@ export function Portfolio() {
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="grid gap-1">
-                  <h3 className="text-xl font-bold">Orah Energy</h3>
+                  <h3 className="text-xl font-bold flex items-center gap-2">
+                    <Badge className="border-green-600 text-green-600 border bg-transparent font-bold px-4 animate-pulse">New ✨</Badge>
+                    Orah Energy
+                  </h3>
                   <p className="text-muted-foreground">
                     Created a comprehensive website for Orah Energy to establish
                     a strong online presence and generate leads. The site
