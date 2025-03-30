@@ -10,7 +10,12 @@ export function Portfolio() {
           className="flex items-center justify-center"
           prefetch={false}
         >
-          <CodeIcon className="h-6 w-6" />
+          <Image
+            src="/Logo.png"
+            alt="Heritier Kaumbu"
+            width={32}
+            height={32}
+          />
           <span className="sr-only">Heritier Kaumbu</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
@@ -52,13 +57,6 @@ export function Portfolio() {
           width={1500}
           className="absolute z-[-1] top-0 left-0 "
         />
-        {/* <Image
-          alt="Splatter"
-          src={"/Splatter.png"}
-          height={1500}
-          width={1500}
-          className="absolute z-[-1] top-0 left-0"
-        /> */}
         <section className="w-full h-dvh py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
@@ -191,7 +189,7 @@ export function Portfolio() {
         </section>
         <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            {/* <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
                   Featured Projects
@@ -205,23 +203,26 @@ export function Portfolio() {
                 </p>
               </div>
             </div>
+
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="grid gap-1">
-                  <h3 className="text-xl font-bold">My Portfolio</h3>
+                  <h3 className="text-xl font-bold">Orah Energy</h3>
                   <p className="text-muted-foreground">
-                    This is my personal portfolio website where I showcase my
-                    skills, projects, and work experience as a software
-                    developer. The website is built using React and TypeScript,
-                    and it features a modern and responsive design. Visitors can
-                    learn more about me, view my projects, and get in touch with
-                    me through the provided contact form or other channels. The
-                    website also includes links to my resume and GitHub profile
-                    for further information. Feel free to explore and reach out!
+                    Created a comprehensive website for Orah Energy to establish
+                    a strong online presence and generate leads. The site
+                    details their core services - Solar Energy (EPC), Advanced
+                    Lighting, and Smart Metering - through dedicated sections,
+                    including an interactive services slider. Key features
+                    include clear calls-to-action, company information (mission,
+                    vision, accreditations), and a breakdown of their process.
+                    The project was built using Next.js for optimal performance
+                    and SEO, with Tailwind CSS for a clean, accessible, and
+                    fully responsive design.
                   </p>
                   <div className="flex gap-2">
                     <Link
-                      href="https://www.techbk.dev/"
+                      href="https://orahenergy.co.za/"
                       className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
@@ -231,13 +232,13 @@ export function Portfolio() {
                 </div>
               </div>
               <img
-                src="/techbk.png"
+                src="/orah-energy.png"
                 width="550"
                 height="310"
                 alt="Project"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                className="mx-auto aspect-video overflow-hidden rounded-xl  object-center sm:w-full lg:order-last"
               />
-            </div> */}
+            </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <img
                 src="/intobeing.png"

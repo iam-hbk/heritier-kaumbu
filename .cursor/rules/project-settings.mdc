@@ -1,0 +1,7 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+this project uses nextjs 15. and tailwind css v3
+bun is used as the package manager. check [package.json](mdc:package.json) before installing anything when you need to installing something.
