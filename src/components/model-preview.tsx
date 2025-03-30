@@ -136,7 +136,7 @@ const ModelPreviews = React.memo<ModelPreviewProps>(
 
     return (
       <Canvas
-        shadows
+        shadows={false}
         camera={{ position: [0, 0, 150], fov: 50 }}
         dpr={[1, 2]}
         frameloop="demand"
@@ -155,10 +155,25 @@ const ModelPreviews = React.memo<ModelPreviewProps>(
         }}
       >
         {/* <color attach="background" args={[backgroundColor]} /> */}
-        <ambientLight intensity={0.6 * Math.PI} />
+        <ambientLight intensity={0.8 * Math.PI} />
         <directionalLight
           position={[50, 50, 100]}
-          intensity={0.8 * Math.PI}
+          intensity={0.6 * Math.PI}
+          castShadow={false}
+        />
+        <directionalLight
+          position={[-50, -50, -100]}
+          intensity={0.5 * Math.PI}
+          castShadow={false}
+        />
+        <directionalLight
+          position={[100, 0, -50]}
+          intensity={0.4 * Math.PI}
+          castShadow={false}
+        />
+        <directionalLight
+          position={[-100, 0, 50]}
+          intensity={0.4 * Math.PI}
           castShadow={false}
         />
         {/* {environment} */}

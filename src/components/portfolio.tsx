@@ -5,7 +5,7 @@ import Logo3D from "./logo3D";
 export function Portfolio() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 lg:px-6 h-14 flex items-center">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/60 px-4 lg:px-6 h-14 flex items-center">
         <Link
           href="#"
           className="flex items-center justify-center gap-2"
@@ -51,9 +51,8 @@ export function Portfolio() {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full min-h-[90vh] relative overflow-hidden bg-gradient-to-b from-background to-muted">
-          <div className="absolute inset-0 bg-grid-small-black/[0.2] -z-10" />
-          <div className="container border border-red-500  p-4 py-6 flex md:flex-row flex-col justify-around items-center min-h-[90vh]">
+        <section className="w-full min-h-[90vh] relative overflow-hidden bg-linear-to-b from-background to-muted">
+          <div className="container relative p-4 py-6 flex md:flex-row flex-col justify-around items-center min-h-[90vh]">
             <div className="flex flex-col justify-center items-center md:items-start space-y-4">
               <div className="space-y-2 flex flex-col items-start">
                 <Image
@@ -80,14 +79,14 @@ export function Portfolio() {
               <div className="flex gap-2 flex-row">
                 <Link
                   href="#services"
-                  className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                   prefetch={false}
                 >
                   Our Services
                 </Link>
                 <Link
                   href="#contact"
-                  className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-xs transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                   prefetch={false}
                 >
                   Get in Touch
@@ -209,7 +208,7 @@ export function Portfolio() {
                   <div className="flex gap-2">
                     <Link
                       href="https://orahenergy.co.za/"
-                      className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       View Project
@@ -251,7 +250,7 @@ export function Portfolio() {
                   <div className="flex gap-2">
                     <Link
                       href="https://intobeingplacements.co.za/"
-                      className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                      className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                       prefetch={false}
                     >
                       View Project
@@ -295,7 +294,7 @@ export function Portfolio() {
                     <Link
                       target="_blank"
                       href="https://vbeidqt5tvyy2ydf.public.blob.vercel-storage.com/CVs/Heritier%20Kaumbu%20CV-GQADoYbw2SafzlDvocteedsbRC8OsZ.pdf"
-                      className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow"
+                      className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow-sm"
                       prefetch={false}
                     >
                       View Resume
@@ -303,7 +302,7 @@ export function Portfolio() {
                     <Link
                       target="_blank"
                       href="https://github.com/iam-hbk/"
-                      className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm"
+                      className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-xs"
                       prefetch={false}
                     >
                       GitHub
@@ -341,7 +340,7 @@ export function Portfolio() {
                 </p>
                 <Link
                   href="mailto:contact@techbk.co.za"
-                  className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-xs transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                   prefetch={false}
                 >
                   Contact Us
