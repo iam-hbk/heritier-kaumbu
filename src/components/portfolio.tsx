@@ -1,30 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
+import Logo3D from "./logo3D";
 
 export function Portfolio() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className=" sticky-0 px-4 lg:px-6 h-14 flex items-center">
+      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-4 lg:px-6 h-14 flex items-center">
         <Link
           href="#"
-          className="flex items-center justify-center"
+          className="flex items-center justify-center gap-2"
           prefetch={false}
         >
           <Image
-            src="/Logo.png"
-            alt="Heritier Kaumbu"
-            width={32}
+            src="/Techbk-logo.svg"
+            alt="Techbk"
+            width={120}
             height={32}
+            className="h-8 w-auto"
           />
-          <span className="sr-only">Heritier Kaumbu</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link
-            href="#skills"
+            href="#services"
             className="text-sm font-medium hover:underline underline-offset-4"
             prefetch={false}
           >
-            Skills
+            Services
           </Link>
           <Link
             href="#projects"
@@ -34,11 +35,11 @@ export function Portfolio() {
             Projects
           </Link>
           <Link
-            href="#work_experience"
+            href="#team"
             className="text-sm font-medium hover:underline underline-offset-4"
             prefetch={false}
           >
-            Experience
+            Team
           </Link>
           <Link
             href="#contact"
@@ -49,83 +50,71 @@ export function Portfolio() {
           </Link>
         </nav>
       </header>
-      <main className="flex-1 relative">
-        <Image
-          alt="Splatter"
-          src={"/Splatter.svg"}
-          height={1500}
-          width={1500}
-          className="absolute z-[-1] top-0 left-0 "
-        />
-        <section className="w-full h-dvh py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
-              <div className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    Heritier Kaumbu
-                  </h1>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                    Software Developer
+      <main className="flex-1">
+        <section className="w-full min-h-[90vh] relative overflow-hidden bg-gradient-to-b from-background to-muted">
+          <div className="absolute inset-0 bg-grid-small-black/[0.2] -z-10" />
+          <div className="container border border-red-500  p-4 py-6 flex md:flex-row flex-col justify-around items-center min-h-[90vh]">
+            <div className="flex flex-col justify-center items-center md:items-start space-y-4">
+              <div className="space-y-2 flex flex-col items-start">
+                <Image
+                  src="/Techbk-logo.svg"
+                  width={350}
+                  height={350}
+                  alt="Techbk"
+                  className="rounded-xl object-contain "
+                  priority
+                />
+                <div className="px-4 py-2 space-y-2">
+                  <p className="max-w-[600px] text-primary text-xl md:text-2xl font-medium">
+                    Innovative Software Solutions
                   </p>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                    I am a skilled software developer with expertise in building
-                    scalable and efficient web applications. I specialize in
-                    front-end development using modern frameworks and libraries,
-                    and I also have experience in back-end development and
-                    DevOps.
+                    We are a dynamic software development company specializing
+                    in building scalable and efficient web applications. Our
+                    expertise spans front-end development, back-end solutions,
+                    and DevOps practices, delivering cutting-edge technology
+                    solutions for modern businesses.
                   </p>
-                </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Link
-                    target="_blank"
-                    href="https://vbeidqt5tvyy2ydf.public.blob.vercel-storage.com/CVs/Heritier%20Kaumbu%20CV-GQADoYbw2SafzlDvocteedsbRC8OsZ.pdf"
-                    className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                    prefetch={false}
-                  >
-                    View Resume
-                  </Link>
-                  <Link
-                    target="blank"
-                    // href="https://github.com/iam-hbk/"
-                    href="mailto:heritierkaumbu@icloud.com"
-                    className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                    prefetch={false}
-                  >
-                    Contact Me
-                  </Link>
                 </div>
               </div>
-              <Image
-                src="/Profile.png"
-                width="550"
-                height="550"
-                alt="Hero"
-                className="mx-auto  rounded-xl object-cover sm:w-full sm:max-w-[500px] lg:order-last"
-              />
+              <div className="flex gap-2 flex-row">
+                <Link
+                  href="#services"
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={false}
+                >
+                  Our Services
+                </Link>
+                <Link
+                  href="#contact"
+                  className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                  prefetch={false}
+                >
+                  Get in Touch
+                </Link>
+              </div>
+            </div>
+            <div className="relative ">
+              <Logo3D />
             </div>
           </div>
         </section>
         <section
-          id="skills"
+          id="services"
           className="w-full py-12 md:py-24 lg:py-32 bg-muted"
         >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div
-                  id="skills"
-                  className="inline-block rounded-lg bg-primary text-primary-foreground px-3 py-1 text-sm"
-                >
-                  Key Skills
+                <div className="inline-block rounded-lg bg-primary text-primary-foreground px-3 py-1 text-sm">
+                  Our Services
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  What I Can Do
+                  What We Do
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I have a diverse set of skills that allow me to tackle a wide
-                  range of software development challenges. Here are some of my
-                  key capabilities:
+                  We offer a comprehensive range of software development
+                  services to help businesses thrive in the digital age.
                 </p>
               </div>
             </div>
@@ -134,44 +123,41 @@ export function Portfolio() {
                 <ul className="grid gap-6">
                   <li>
                     <div className="grid gap-1">
-                      <h3 className="text-xl font-bold">
-                        Front-end Development
-                      </h3>
+                      <h3 className="text-xl font-bold">Web Development</h3>
                       <p className="text-muted-foreground">
-                        Proficient in HTML, CSS, JavaScript, and modern
-                        front-end frameworks like React, Vue.js, and Angular.
+                        Custom web applications built with modern frameworks
+                        like React, Next.js, and Vue.js, focusing on performance
+                        and user experience.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="grid gap-1">
+                      <h3 className="text-xl font-bold">Backend Solutions</h3>
+                      <p className="text-muted-foreground">
+                        Scalable and secure backend systems using Node.js,
+                        Python, and modern cloud infrastructure.
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className="grid gap-1">
+                      <h3 className="text-xl font-bold">Cloud & DevOps</h3>
+                      <p className="text-muted-foreground">
+                        Cloud infrastructure setup, containerization, and CI/CD
+                        pipeline implementation for seamless deployment.
                       </p>
                     </div>
                   </li>
                   <li>
                     <div className="grid gap-1">
                       <h3 className="text-xl font-bold">
-                        Back-end Development
+                        Technical Consulting
                       </h3>
                       <p className="text-muted-foreground">
-                        Experienced in building scalable and efficient back-end
-                        systems using Node.js, Python, and server-side
-                        frameworks.
-                      </p>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="grid gap-1">
-                      <h3 className="text-xl font-bold">DevOps</h3>
-                      <p className="text-muted-foreground">
-                        Knowledgeable in cloud infrastructure, containerization,
-                        and CI/CD pipelines using tools like AWS, Docker, and
-                        GitHub Actions.
-                      </p>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="grid gap-1">
-                      <h3 className="text-xl font-bold">Database Management</h3>
-                      <p className="text-muted-foreground">
-                        Familiar with relational databases (SQL) and NoSQL
-                        databases (MongoDB, Cassandra) for data storage and
-                        management.
+                        Expert guidance on technology stack selection,
+                        architecture design, and digital transformation
+                        strategies.
                       </p>
                     </div>
                   </li>
@@ -181,8 +167,8 @@ export function Portfolio() {
                 src="/tech-stack.png"
                 width="550"
                 height="310"
-                alt="Skills"
-                className="mx-auto  rounded-xl object-cover object-center sm:w-full lg:order-last"
+                alt="Our Technology Stack"
+                className="mx-auto rounded-xl object-cover object-center sm:w-full lg:order-last"
               />
             </div>
           </div>
@@ -276,78 +262,62 @@ export function Portfolio() {
             </div>
           </div>
         </section>
-        <section
-          id="experience"
-          className="w-full py-12 md:py-24 lg:py-32 bg-muted"
-        >
+        <section id="team" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <div
-                  id="work_experience"
-                  className="inline-block rounded-lg bg-primary text-primary-foreground px-3 py-1 text-sm"
-                >
-                  Work Experience
+                <div className="inline-block rounded-lg bg-primary text-primary-foreground px-3 py-1 text-sm">
+                  Our Team
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  My Professional Journey
+                  Meet Our Expert
                 </h2>
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I have gained valuable experience working in the software
-                  industry for the past few years. Here's a brief overview of my
-                  professional background:
+                  Led by experienced professionals passionate about technology
+                  and innovation.
                 </p>
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="grid gap-1">
-                  <h3 className="text-xl font-bold">
-                    End User Computing Teacher
-                  </h3>
+                  <h3 className="text-xl font-bold">Heritier Kaumbu</h3>
                   <p className="text-muted-foreground">
-                    University of Johannesburg | Aug 2023 - Present
+                    Founder & Lead Developer
                   </p>
                   <p className="text-muted-foreground">
-                    I educate first-year students in Logistics, Retail,
-                    Marketing, and Humanities on End User Computing Skills. My
-                    primary emphasis lies in equipping students with adept
-                    skills in MS Word, MS Excel, MS PowerPoint, and MS Access.
-                    Furthermore, I provide instruction on Computer Literacy and
-                    Internet usage within an academic framework.
+                    A skilled software developer with expertise in building
+                    scalable web applications. Specializing in front-end
+                    development using modern frameworks and libraries, with
+                    extensive experience in back-end development and DevOps.
                   </p>
-                </div>
-                <div className="grid gap-1">
-                  <h3 className="text-xl font-bold">
-                    Software Development Tutor
-                  </h3>
-                  <p className="text-muted-foreground">
-                    University of Johannesburg | Feb 2022 - Dec 2023
-                  </p>
-                  <p className="text-muted-foreground">
-                    I specialized in tutoring Python, C#, JavaScript, and
-                    various web technologies. I helped students understand
-                    programming concepts and best practices through lectures and
-                    one-on-one tutoring. I assessed student performance and
-                    prepared students for careers in software development.
-                  </p>
-                </div>
-                <div className="grid gap-1">
-                  <h3 className="text-xl font-bold">
-                    Ambassador of the UJ Technopreneurship Centre
-                  </h3>
-                  <p className="text-muted-foreground">
-                    University of Johannesburg | Mar 2022 - Present
-                  </p>
-                  <p className="text-muted-foreground">
-                    I represented the centre at events, provided information to
-                    stakeholders, and built relationships with industry
-                    partners. I assisted with program development, mentored
-                    students, and supported initiatives that fostered innovation
-                    and entrepreneurship.
-                  </p>
+                  <div className="flex gap-2 mt-4">
+                    <Link
+                      target="_blank"
+                      href="https://vbeidqt5tvyy2ydf.public.blob.vercel-storage.com/CVs/Heritier%20Kaumbu%20CV-GQADoYbw2SafzlDvocteedsbRC8OsZ.pdf"
+                      className="inline-flex h-8 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow"
+                      prefetch={false}
+                    >
+                      View Resume
+                    </Link>
+                    <Link
+                      target="_blank"
+                      href="https://github.com/iam-hbk/"
+                      className="inline-flex h-8 items-center justify-center rounded-md border border-input bg-background px-4 text-sm font-medium shadow-sm"
+                      prefetch={false}
+                    >
+                      GitHub
+                    </Link>
+                  </div>
                 </div>
               </div>
+              <Image
+                src="/Profile.png"
+                width="550"
+                height="550"
+                alt="Heritier Kaumbu"
+                className="mx-auto rounded-xl object-cover sm:w-full lg:order-last"
+              />
             </div>
           </div>
         </section>
@@ -359,23 +329,22 @@ export function Portfolio() {
                   id="contact"
                   className="inline-block rounded-lg bg-muted px-3 py-1 text-sm"
                 >
-                  Get in Touch
+                  Contact Us
                 </div>
                 <h2 className="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
-                  Let's Collaborate
+                  Start Your Project
                 </h2>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I'm always excited to discuss new projects and opportunities.
-                  Feel free to reach out to me using the contact form or through
-                  any of the provided channels.
+                  Ready to bring your ideas to life? Get in touch with us to
+                  discuss your project requirements and how we can help you
+                  achieve your goals.
                 </p>
                 <Link
-                  target="blank"
-                  href="https://github.com/iam-hbk/"
+                  href="mailto:contact@techbk.co.za"
                   className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                   prefetch={false}
                 >
-                  Contact Me
+                  Contact Us
                 </Link>
               </div>
             </div>
