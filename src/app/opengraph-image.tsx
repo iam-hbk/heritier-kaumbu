@@ -14,17 +14,11 @@ export const contentType = 'image/png'
 
 // Image generation
 export default async function Image() {
-  // Font
-  const interSemiBold = fetch(
-    new URL('./Urbanist-SemiBold.ttf', import.meta.url)
-  ).then((res) => res.arrayBuffer())
-
   return new ImageResponse(
     (
-      // ImageResponse JSX element
       <div
         style={{
-          background: 'linear-gradient(to bottom right, #000000, #1a1a1a)',
+          background: 'linear-gradient(to bottom right, #000000, #171717)',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -34,50 +28,30 @@ export default async function Image() {
           padding: '48px',
         }}
       >
-        <img
-          src={new URL('../public/Techbk-logo.svg', import.meta.url).toString()}
-          alt="TechBK Logo"
-          width={200}
-          height={200}
-          style={{
-            marginBottom: '24px',
-          }}
-        />
         <div
           style={{
-            fontSize: 60,
-            fontFamily: 'Urbanist',
-            background: 'linear-gradient(to bottom right, #ffffff, #cccccc)',
-            backgroundClip: 'text',
-            color: 'transparent',
-            marginBottom: '16px',
+            fontSize: 80,
+            color: '#ffffff',
+            marginBottom: '24px',
             textAlign: 'center',
+            fontWeight: 'bold',
           }}
         >
-          TechBK
+          Heritier Kaumbu
         </div>
         <div
           style={{
-            fontSize: 30,
-            fontFamily: 'Urbanist',
-            color: '#888888',
+            fontSize: 40,
+            color: '#9ca3af',
             textAlign: 'center',
           }}
         >
-          Innovative Software Solutions
+          Software Engineer & Web Developer
         </div>
       </div>
     ),
     {
       ...size,
-      fonts: [
-        {
-          name: 'Urbanist',
-          data: await interSemiBold,
-          style: 'normal',
-          weight: 600,
-        },
-      ],
     }
   )
 } 
