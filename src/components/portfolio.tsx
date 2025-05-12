@@ -344,7 +344,7 @@ export function Portfolio() {
                   achieve your goals.
                 </p>
                 <Link
-                  href="mailto:heritierkaumbu@icloud.com"
+                  href="mailto:info@techbk.dev"
                   className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-xs transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                   prefetch={false}
                 >
